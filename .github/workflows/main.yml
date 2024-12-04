@@ -51,10 +51,10 @@ jobs:
         run: terraform init
 
       # Terraform Plan
-      - name: Terraform Plan
-        run: terraform plan -out=plan.out
+      # - name: Terraform Plan
+      #   run: terraform plan -out=plan.out
 
       # Terraform Apply
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
-        run: terraform destroy -auto-approve plan.out
+        run: terraform destroy -auto-approve #plan.out
