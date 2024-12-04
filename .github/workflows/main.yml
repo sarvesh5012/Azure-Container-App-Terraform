@@ -8,6 +8,10 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: read  # Allows checking out the repository
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
